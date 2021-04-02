@@ -1,0 +1,318 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    margin: 0em;
+    padding: 0em;
+    line-height: 1em;
+    color: #112D4E;
+    scroll-behavior: smooth;
+}
+
+p, li {
+    line-height: 2em;
+}
+
+li {
+    margin-left: 4em;
+}
+
+a, a:active, a:visited {
+    text-decoration: none;
+}
+
+/*** Background settings ***/
+
+.background--default {
+    background-color: #f9f7f7;
+    color: #112D4E;
+}
+
+.background--alternate {
+    background-color: #dbe2ef;
+    color: #112D4E;
+}
+
+.background--dark-alternate {
+    background-color: #3f72af;
+    color: #f9f7f7;
+}
+
+.background--dark-alternate2 {
+    background-color: #112D4E;
+    color: #f9f7f7;
+}
+
+.background--splash {
+    background-image: url("../images/splash_background.jpg");
+    background-color: #3f72af;
+    background-blend-mode: luminosity;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #f9f7f7
+}
+
+/*** Splash section settings ***/
+
+.splash-header {
+    width: 100%; /* 100vw introduces horizontal scroll */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.splash-header > h1 {
+    font-size: 7em;
+    font-weight: 700;
+    color: #f9f7f7;
+    text-align: center;
+    animation: phasein 1s ease-in both
+}
+
+.splash-header > p {
+    font-size: 2em;
+    color: #f9f7f7;
+    text-align: center;
+    animation: phasein 1s ease-in 2s both
+}
+
+@keyframes phasein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Use auto margin of hidden block and scroll-button to put chevron icon at bottom of flexbox */
+.hidden-block {
+    height: 4em;
+    visibility: hidden;
+    margin-bottom: auto;
+}
+
+.scroll-button {
+    margin-top: auto;
+}
+
+.fa-chevron-circle-down {
+    font-size: 4em;
+    font-weight: 700;
+    color: #f9f7f7;
+    animation: phasein 1s ease-in 4s both; 
+}
+
+/*** Main articles settings ***/
+
+.main-article-container {
+    padding: 2em 1.5em;
+}
+
+.main-article {
+    max-width: 60em;
+    margin: 0 auto;
+}
+
+.main-article > h2 {
+    font-size: 3.5em;
+    margin-bottom: 0.5em;
+    color: #3f72af;
+    text-align: center;
+}
+
+.main-article.background--dark-alternate > h2, .main-article.background--dark-alternate2 > h2 {
+    color: #f9f7f7;
+}
+
+.main-article__section {
+    margin-top: 2em;
+}
+
+.main-article__section > h3 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    color: #3f72af;
+}
+
+/*********************************/
+
+#profile-picture {
+    width: auto;
+    height: 15.5em;
+    display: block;
+    margin: 0 auto 2em;
+    border-radius: 50%
+}
+
+/*** Icon group settings ***/
+
+/* Consists of image and label side-by-side */
+.icon-group {
+    display: inline-flex;
+    align-items: center;
+    padding-top: 0.6em;
+}
+
+.icon-group > span {
+    font-size: 1.5em;
+    padding-right: 0.6em;
+    color: #3f72af;
+    transition: color 1s ease;
+}
+
+.icon-group > p {
+    color: #3f72af;
+    transition: color 1s ease;
+}
+
+.icon-group--light > span, .icon-group--light > p {
+    color: #3f72af;
+    transition: color 1s ease;
+}
+
+.icon-group-link > span {
+    font-size: 2em;
+}
+
+.icon-group-link:hover > span {
+    color: #112D4E;
+}
+
+.icon-group-link:hover > p {
+    text-decoration: underline;
+    color: #112D4E;
+}
+
+.icon-group-link--light:hover > span {
+    color: #f9f7f7;
+}
+
+.icon-group-link--light:hover > p {
+    text-decoration: underline;
+    color: #f9f7f7;
+}
+
+/*** Experience section settings ***/
+
+.experience-section-article {
+    margin-top: 2.5em;
+}
+
+.experience-section-article h4 {
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.experience-section-article__left > p, .experience-section-article__right > p {
+    padding-top: 1em;
+}
+
+.experience-section-article__right > p:first-child {
+    font-weight: 700;
+    font-size: 1em;
+}
+
+.icon-group__location--desktop {
+    display: none;
+}
+
+.icon-group__location--mobile {
+    display: inline-flex;
+}
+
+@media only screen and (max-width: 48em) {
+    .mobile--hide {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 48em) {
+    .experience-section-article {
+        display: flex;
+    }
+
+    .experience-section-article__left {
+        flex: 1;
+    }
+    
+    .experience-section-article__right {
+        flex: 2;
+        margin-left: 4em;
+    }
+
+    .experience-section-article__right > p:first-child {
+        padding-top: 0;
+        line-height: 1em;
+    }
+
+    .icon-group__location--desktop {
+        display: inline-flex;
+    }
+    
+    .icon-group__location--mobile {
+        display: none
+    }
+}
+
+/******************************************/
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    flex-direction: column;
+}
+
+@media only screen and (min-width: 48em) {
+    .flex-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: stretch;
+        flex-direction: row;
+    }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+    grid-gap: 1em;
+}
+
+.figure-grid-cell {
+    display: flex;
+    flex-direction: column;
+}
+
+.figure-grid-cell > img {
+    width: auto;
+    height: 5.6em;
+    align-self: center;
+    background-color: transparent;
+    padding: 0.6em;
+}
+
+.figure-grid-cell > figcaption {
+    text-align: center;
+}
+
+/*** Project article settings ***/
+
+.project-article {
+    text-align: center;
+    margin-top: 1em;
+    padding: 1em;
+    background-color: #f9f7f7;
+    border: medium solid #3f72af;
+    border-radius: 1em;
+}
+
+.project-article > h3 {
+    font-weight: 700;
+    font-size: 1.2em;
+    margin-bottom: 0.6em;
+}
