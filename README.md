@@ -1,3 +1,3 @@
 # PersonalWebsite
 My personal website.
-https://dphtran501.github.io/PersonalWebsite/
+https://www.derekptran.com
